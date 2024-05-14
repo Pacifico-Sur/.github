@@ -3,7 +3,7 @@ version: "3.0"
 services:
 
   database:
-    image: davidmacer/serloc_db
+    image: davidmacer/serloc_db:latest
     container_name: cont-postgis
     restart: always
     environment:
@@ -16,7 +16,7 @@ services:
         ipv4_address: 172.16.238.10
 
   app:
-    image: davidmacer/serloc_app
+    image: davidmacer/serloc_app:latest
     container_name: cont-serloc
     restart: always
     network_mode: github_database_network
